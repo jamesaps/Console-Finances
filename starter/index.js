@@ -117,3 +117,5 @@ for (let i = 0; i < finances.length; i += 1) {
     }
   }
 }
+
+averageChangeInProfitLoss = totalChangeInProfitLoss / (numberOfMonths - 1);
