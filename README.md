@@ -10,17 +10,17 @@ This is a financial analysis project of monthly sales data. The analysis has bee
 Please clone this repository with the following command in your terminal:
 
 ```
-git clone https://github.com/jamesaps/console-finances.git
+git clone https://github.com/jamesaps/Console-Finances.git
 ```
 
 ## Usage
-This code is designed to run from the user's browser. It is set up to automatically deploy to github pages when changes are committed to the main branch. You can find a link to a live version of the site [here](https://jamesaps.github.io/console-finances/).
+This code is designed to run from the user's browser. It is set up to automatically deploy to github pages when changes are committed to the main branch. You can find a link to a live version of the site [here](https://jamesaps.github.io/Console-Finances/).
 
 ## Credits
 Starter code was provided by eDX.
 
 ## License
 
-Licensed under the [MIT](https://github.com/jamesaps/console-finances/blob/main/LICENSE) license.
+Licensed under the [MIT](https://github.com/jamesaps/Console-Finances/blob/main/LICENSE) license.
 
 © 2023 James Stott. Confidential and Proprietary. All Rights Reserved.
