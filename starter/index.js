@@ -86,3 +86,12 @@ let finances = [
   ['Jan-2017', 138230],
   ['Feb-2017', 671099],
 ];
+let numberOfMonths = finances.length;
+let netProfitLoss = 0;
+let totalChangeInProfitLoss = 0;
+let greatestIncreaseInProfitLoss;
+let dateOfGreatestIncreaseInProfitLoss;
+let greatestDecreaseInProfitLoss;
+let dateOfGreatestDecreaseInProfitLoss;
+let averageChangeInProfitLoss;
+
