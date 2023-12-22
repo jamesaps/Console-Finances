@@ -86,6 +86,9 @@ let finances = [
   ['Jan-2017', 138230],
   ['Feb-2017', 671099],
 ];
+
+// intialise analysis variables
+
 let numberOfMonths = finances.length;
 let netProfitLoss = 0;
 let totalChangeInProfitLoss = 0;
@@ -95,12 +98,18 @@ let greatestDecreaseInProfitLoss;
 let dateOfGreatestDecreaseInProfitLoss;
 let averageChangeInProfitLoss;
 
+// loop through finances array
+
 for (let i = 0; i < finances.length; i += 1) {
   netProfitLoss += finances[i][1];
+
+  // only analyse change in profit/loss from second month onwards
 
   if (i > 0) {
     let changeInProfitLossFromPreviousMonth = finances[i][1] - finances[i - 1][1];
     totalChangeInProfitLoss += changeInProfitLossFromPreviousMonth;
+
+    // check if the change in profit/loss for current month is greater than the greatest increase in profit/loss thus far and update the greatest increase in profit loss if so (or alternatively if the greatest increase in profit/loss is undefined, set it to the change in profit/loss for the current month)
 
     if (
       greatestIncreaseInProfitLoss === undefined
@@ -108,6 +117,8 @@ for (let i = 0; i < finances.length; i += 1) {
         greatestIncreaseInProfitLoss = changeInProfitLossFromPreviousMonth;
         dateOfGreatestIncreaseInProfitLoss = finances[i][0];
     }
+
+    // as above but for the greatest decrease in profit/loss
 
     if (
       greatestDecreaseInProfitLoss === undefined
@@ -118,12 +129,19 @@ for (let i = 0; i < finances.length; i += 1) {
   }
 }
 
+// calculate average change in profit/loss bearing in mind we started counting changes from the second month onwards (hence the denominator is numberOfMonths - 1)
+
 averageChangeInProfitLoss = totalChangeInProfitLoss / (numberOfMonths - 1);
 
+// set up console log title and divider
 console.log("Financial Analysis");
 console.log("----------------");
+
+// display metrics and their corresponding values inline
 console.log("Total Months: " + numberOfMonths);
 console.log("Total: $" + netProfitLoss);
-console.log("Average Change: $" + averageChangeInProfitLoss.toFixed(2));
+console.log("Average Change: $" + averageChangeInProfitLoss.toFixed(2)); // round to 2 decimal places
+
+// display the greatest increase and decrease in profit/loss and their corresponding dates
 console.log("Greatest Increase in Profits/Losses: " + dateOfGreatestIncreaseInProfitLoss + " ($" + greatestIncreaseInProfitLoss +")");
 console.log("Greatest Decrease in Profits/Losses: " + dateOfGreatestDecreaseInProfitLoss + " ($" + greatestDecreaseInProfitLoss +")");
