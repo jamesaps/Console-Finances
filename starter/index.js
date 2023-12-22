@@ -108,5 +108,12 @@ for (let i = 0; i < finances.length; i += 1) {
         greatestIncreaseInProfitLoss = changeInProfitLossFromPreviousMonth;
         dateOfGreatestIncreaseInProfitLoss = finances[i][0];
     }
+
+    if (
+      greatestDecreaseInProfitLoss === undefined
+      || changeInProfitLossFromPreviousMonth < greatestDecreaseInProfitLoss) {
+        greatestDecreaseInProfitLoss = changeInProfitLossFromPreviousMonth;
+        dateOfGreatestDecreaseInProfitLoss = finances[i][0];
+    }
   }
 }
