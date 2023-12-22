@@ -119,3 +119,11 @@ for (let i = 0; i < finances.length; i += 1) {
 }
 
 averageChangeInProfitLoss = totalChangeInProfitLoss / (numberOfMonths - 1);
+
+console.log("Financial Analysis");
+console.log("----------------");
+console.log("Total Months: " + numberOfMonths);
+console.log("Total: $" + netProfitLoss);
+console.log("Average Change: " + averageChangeInProfitLoss);
+console.log("Greatest Increase in Profits/Losses: " + dateOfGreatestIncreaseInProfitLoss + " ($" + greatestIncreaseInProfitLoss +")");
+console.log("Greatest Decrease in Profits/Losses: " + dateOfGreatestDecreaseInProfitLoss + " ($" + greatestDecreaseInProfitLoss +")");
