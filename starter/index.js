@@ -97,4 +97,9 @@ let averageChangeInProfitLoss;
 
 for (let i = 0; i < finances.length; i += 1) {
   netProfitLoss += finances[i][1];
+
+  if (i > 0) {
+    let changeInProfitLossFromPreviousMonth = finances[i][1] - finances[i - 1][1];
+    totalChangeInProfitLoss += changeInProfitLossFromPreviousMonth;
+  }
 }
