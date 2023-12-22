@@ -95,3 +95,6 @@ let greatestDecreaseInProfitLoss;
 let dateOfGreatestDecreaseInProfitLoss;
 let averageChangeInProfitLoss;
 
+for (let i = 0; i < finances.length; i += 1) {
+  netProfitLoss += finances[i][1];
+}
